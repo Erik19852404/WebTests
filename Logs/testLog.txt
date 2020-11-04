@@ -1,0 +1,11 @@
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:1934/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": []}}}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:1934
+DEBUG:urllib3.connectionpool:http://127.0.0.1:1934 "POST /session HTTP/1.1" 200 714
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:1934/session/bc9a5f3e571d401cddcf8e8dee0b94ae/url {"url": "https://mail.ru"}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:1934 "POST /session/bc9a5f3e571d401cddcf8e8dee0b94ae/url HTTP/1.1" 200 14
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:DELETE http://127.0.0.1:1934/session/bc9a5f3e571d401cddcf8e8dee0b94ae/window {}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:1934 "DELETE /session/bc9a5f3e571d401cddcf8e8dee0b94ae/window HTTP/1.1" 200 12
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:root:Test 01 complete...
