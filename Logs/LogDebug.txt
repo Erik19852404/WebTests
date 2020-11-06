@@ -1,0 +1,12 @@
+DEBUG:root:TestOpenStartPage started...
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:34413/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": []}}}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:34413
+DEBUG:urllib3.connectionpool:http://127.0.0.1:34413 "POST /session HTTP/1.1" 200 716
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:34413/session/e0a618e7d41f510263f7b9076cc74e58/url {"url": "http://kitchen/"}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:34413 "POST /session/e0a618e7d41f510263f7b9076cc74e58/url HTTP/1.1" 200 14
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:DELETE http://127.0.0.1:34413/session/e0a618e7d41f510263f7b9076cc74e58/window {}
+DEBUG:urllib3.connectionpool:http://127.0.0.1:34413 "DELETE /session/e0a618e7d41f510263f7b9076cc74e58/window HTTP/1.1" 200 12
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:root:TestOpenStartPage finished...
