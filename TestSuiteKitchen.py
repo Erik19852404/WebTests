@@ -6,6 +6,7 @@ import logging
 import Global
 
 pathLog = 'D:\\Git\\WebTests\\Logs\\LogDebug.txt'
+driver = Global.GetChromeDriver()
 
 def ConfigLogs():
     Global.RemoveOldLogs([pathLog])
@@ -14,7 +15,6 @@ def ConfigLogs():
 def TestOpenStartPage():
     ConfigLogs()
     logging.debug('TestOpenStartPage started...')
-    driver = Global.GetChromeDriver()
     result = True
     try:
         driver.get('http://kitchen/')
