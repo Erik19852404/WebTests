@@ -3,6 +3,7 @@ import sys
 import time
 import logging
 import unittest
+
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -22,22 +23,23 @@ class TestCaseKitchenAuthorization(unittest.TestCase):
         pass
     def test_OpenMainPage(self):
         self.assertTrue(TestSuiteKitchen.TestOpenStartPage(), "Can't open main page...")
-    def test_Login(self):
+    def test_LoginFormOpen(self):
         driver = self.driverChrome
         wait = WebDriverWait(driver, 5)
         testResult = True
         errText = ''
         try:
             driver.get('http://kitchen/')
-            driver.find_element(By.PARTIAL_LINK_TEXT,'ход').click()
+            btnEnter = driver.find_element_by_partial_link_text('ход')
+            btnEnter.click()
             loginForm = wait.until(EC.visibility_of_element_located((By.XPATH,'//*[@id="myModal"]/div')))
             ActionChains(driver).move_to_element(loginForm).perform()
         except Exception as ex:
             testResult = False
-            errText = str(ex)
+            errText = ex
         finally:
             driver.close()
-        self.assertTrue(testResult, errText)
+        self.assertTrue(testResult, str(errText))
 
 if __name__ == '__main__':
     unittest.main()
