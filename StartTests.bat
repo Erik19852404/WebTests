@@ -1,1 +1,1 @@
-start C:\Users\erik\AppData\Local\Programs\Python\Python39\python.exe -m unittest D:\Git\WebTests\index.py
+start C:\Users\erik\AppData\Local\Programs\Python\Python39\python.exe -m unittest D:\Git\WebTests\index.py -v

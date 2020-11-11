@@ -1,8 +1,0 @@
-DEBUG:root:TestOpenStartPage started...
-DEBUG:selenium.webdriver.remote.remote_connection:POST http://127.0.0.1:50915/session/3c8b126627db0245c43cca1127597e41/url {"url": "http://kitchen/"}
-DEBUG:urllib3.connectionpool:http://127.0.0.1:50915 "POST /session/3c8b126627db0245c43cca1127597e41/url HTTP/1.1" 200 14
-DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
-DEBUG:selenium.webdriver.remote.remote_connection:DELETE http://127.0.0.1:50915/session/3c8b126627db0245c43cca1127597e41/window {}
-DEBUG:urllib3.connectionpool:http://127.0.0.1:50915 "DELETE /session/3c8b126627db0245c43cca1127597e41/window HTTP/1.1" 200 12
-DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
-DEBUG:root:TestOpenStartPage finished...
