@@ -8,23 +8,14 @@ import Global
 import TestCases
 
 
-def TestSuite1():
+def TestSuiteKitchen():
     suite = unittest.TestSuite()
     suite.addTest(TestCases.TestCaseKitchenAuthorization('test_LoginFormOpen'))
     suite.addTest(TestCases.TestCaseKitchenAuthorization('test_OpenMainPage'))
     return suite
 
-def TestSuite2():
-    suite = unittest.TestSuite()
-    suite.addTest(TestCases.TestCaseKitchenAuthorization('test_LoginFormOpen'))
-    suite.addTest(TestCases.TestCaseKitchenAuthorization('test_OpenMainPage'))
-    return suite
-
-if __name__ == '__main__':
-    # простой способ запустить тесты без группировки в комплекты
-    #unittest.main()
-    #запуск тест-комплектов
+if __name__ == '__main__':#запуск тест-комплектов
+    Global.InitDriver()
     runner = unittest.TextTestRunner()
-    runner.run(TestSuite1())
-    runner.run(TestSuite2())
-
+    runner.run(TestSuiteKitchen())
+    Global.CloseDriver()

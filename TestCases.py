@@ -15,22 +15,16 @@ import Global
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-pathLog = 'D:\\Git\\WebTests\\Logs\\LogDebug.txt'
-
-def ConfigLogs():
-    Global.SetPathLogs(pathLog[0:len(pathLog) - 4] + datetime.now().strftime("%d_%m_%H_%M_%S") + pathLog[len(pathLog) - 4:])
-
 class TestCaseKitchenAuthorization(unittest.TestCase):
     def setUp(self):#some actions before start test
-        ConfigLogs()
-        self.driver = Global.GetChromeDriver()
+        Global.ConfigLogs()
 
     def tearDown(self):#some actions after test run
-        self.driver.close()
+        pass
 
     def test_OpenMainPage(self):
         logging.debug('test_OpenMainPage started...')
-        driver = self.driver
+        driver = Global.driver
         testResult = True
         try:
             driver.get('http://kitchen/')
@@ -43,7 +37,7 @@ class TestCaseKitchenAuthorization(unittest.TestCase):
         
     def test_LoginFormOpen(self):
         logging.debug('test_LoginFormOpen started...')
-        driver = self.driver
+        driver = Global.driver
         wait = WebDriverWait(driver, 5)
         testResult = True
         try:
@@ -58,3 +52,8 @@ class TestCaseKitchenAuthorization(unittest.TestCase):
         finally:
             logging.debug('test_LoginFormOpen finished...')  
         self.assertTrue(testResult, "Can't open login form...")
+
+
+        
+#if __name__ == '__main__':# простой способ запустить тесты без группировки в комплекты    
+    #unittest.main()
