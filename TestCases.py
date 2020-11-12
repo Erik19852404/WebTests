@@ -3,12 +3,13 @@ import sys
 import time
 import logging
 import unittest
-from datetime import datetime
 
+from datetime import datetime
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.keys import Keys
 
 import Global
 
@@ -28,6 +29,7 @@ class TestCaseKitchenAuthorization(unittest.TestCase):
         testResult = True
         try:
             driver.get('http://kitchen/')
+            assert 'Они обедают в офисе - Запишись на обед' in driver.title
         except Exception as ex:
             logging.error(ex)
             testResult = False
